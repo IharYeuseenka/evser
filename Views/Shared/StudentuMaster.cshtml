@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Student";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+<div class="navbar-ge-side col-md-3">
+            <nav>
+                <ul class="nav nav-pills nav-stacked span2">
+                    <li>@Html.ActionLink("Памятка студенту", "Pametka", "Studentu")</li>
+                    <li>@Html.ActionLink("Учебные графики", "Graffiki", "Studentu")</li>
+                    <li>@Html.ActionLink("Расписание", "Raspisanie", "Studentu")</li>
+                    <li>@Html.ActionLink("Сессия", "Session", "Studentu")</li>
+                    <li>@Html.ActionLink("Трудоустройство", "Trud", "Studentu")</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-9 content-block">
+            @RenderBody()
+        </div>

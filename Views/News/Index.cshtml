@@ -1,0 +1,18 @@
+﻿@model MvcApplication1.Models.NewsViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+<div class="content-block">
+    <div class="news">
+        @foreach (var t in Model.NewsList)
+        {
+            <h3>@t.Title</h3> 
+            <div class="news-content">
+                @t.Text
+            </div>
+        }
+       
+    </div>
+</div>

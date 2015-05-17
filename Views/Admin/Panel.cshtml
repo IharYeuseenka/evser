@@ -1,0 +1,30 @@
+﻿@model MvcApplication1.Models.NewsViewModel
+@{
+    ViewBag.Title = "Panel";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+<div class="content-block">
+    @Html.ActionLink("Добавить", "AddNews", "Admin")
+    <table>
+        <tr>
+            <td>Заголовок</td>
+            <td>Дата</td>
+            <td>Действия</td>
+        </tr>
+        @foreach (var t in Model.NewsList)
+        {
+            <tr>
+                <td>
+                    @t.Title
+                </td>
+                <td>
+                    @t.Date
+                </td>
+                <td>
+                    @Html.ActionLink("Удалить", "DeleteNews", "Admin", new { @id = @t.ID}, null)
+                </td>
+            </tr> 
+        }
+    </table>
+</div>

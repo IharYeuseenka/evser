@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Abiturient";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+<div class="navbar-ge-side col-md-3">
+            <nav>
+                <ul class="nav nav-pills nav-stacked span2">
+                    <li>@Html.ActionLink("Общая информация", "Index", "Abiturientu")</li>
+                    <li>@Html.ActionLink("Направления подготовки", "Napravleniya", "Abiturientu")</li>
+                    <li>@Html.ActionLink("Изучаемые дисциплины", "Disciplines", "Abiturientu")</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-9 content-block">
+        @RenderBody()
+        </div>

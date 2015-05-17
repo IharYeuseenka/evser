@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Aspirants";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+<div class="navbar-ge-side col-md-3">
+            <nav>
+                <ul class="nav nav-pills nav-stacked span2">
+                    <li>@Html.ActionLink("Общая информация", "Index", "Aspirants")</li>
+                    <li>@Html.ActionLink("Паспорт специальности 05.13.11", "Passport", "Aspirants")</li>
+                    <li>@Html.ActionLink("Перечень журналов ВАК", "Journales", "Aspirants")</li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-9 content-block">
+        @RenderBody()
+        </div>

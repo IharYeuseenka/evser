@@ -1,0 +1,11 @@
+﻿@model MvcApplication1.Models.Newse
+@{
+    ViewBag.Title = "AddNews";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+@using (Html.BeginForm("AddNews", "Admin", FormMethod.Post))
+{
+    <label>Заголовок</label> @Html.TextBoxFor(t => t.Title)
+    <label>Текст    </label> @Html.TextAreaFor(t => t.Text)
+    <input type="submit" value="Сохранить" />
+}

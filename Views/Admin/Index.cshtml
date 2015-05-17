@@ -1,0 +1,20 @@
+﻿@model MvcApplication1.Models.LoginModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+
+<div class="content-block">
+    <h2>@ViewBag.ValidationMessage</h2>
+<fieldset>
+    @using(Html.BeginForm("Index","Admin", FormMethod.Post))
+    {
+        <p>Введите логин</p>
+        @Html.TextBoxFor(t => t.Username)<br />
+        <p>Введите пароль</p>
+        @Html.PasswordFor(t => t.Password)<br />
+        <input type="submit" value ="Войти"/>        <input type="reset" value="Отмена"/> 
+    }
+</fieldset>
+    </div>

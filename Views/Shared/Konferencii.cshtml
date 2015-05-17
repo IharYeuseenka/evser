@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Konferencii";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+
+<div class="navbar-ge-side col-md-3">
+            <nav>
+                <ul class="nav nav-pills nav-stacked span2">
+                    <li><span class="baida">Студенческая-конференция</span>
+                                            </li>
+                    <li>@Html.ActionLink("Информационное письмо", "Pismo", "Konferencii")</li>
+                    <li>@Html.ActionLink("Правила участия", "Pravila", "Konferencii")</li>
+                    <li>@Html.ActionLink("Требования к оформлению", "Trebovaniya", "Konferencii")</li>
+                     <li>@Html.ActionLink("Архив", "Archiv", "Konferencii")</li>
+                    <li><span class="baida">Интернет-конференция</span>
+                                            </li>
+                    <li>@Html.ActionLink("VI Интернет-конференцияо", "NetKonf", "Konferencii")</li>
+                    <li>@Html.ActionLink("Информационное письмо", "Archiv", "Konferencii")</li>
+                    <li>@Html.ActionLink("Правила участия", "IntPravila", "Konferencii")</li>
+                    <li>@Html.ActionLink("Требования к оформлению", "Trebovaniya", "Konferencii")</li>
+                     <li>@Html.ActionLink("Архив", "IntArchive", "Konferencii")</li>
+                    
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-9 content-block">
+            @RenderBody()
+        </div>
+

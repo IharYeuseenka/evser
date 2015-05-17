@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Newses" EntityType="DatabaseModel.Newse" />
+  </EntityContainer>
+  <EntityType Name="Newse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Text" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="true" />
+  </EntityType>
+</Schema>
